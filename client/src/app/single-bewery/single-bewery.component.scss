@@ -1,0 +1,73 @@
+.main{
+    position: relative;
+    top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .sub_main{
+        width: 86%;
+        padding: 2rem;
+        background-color: rgb(241, 234, 234);
+        gap: 10px;
+        .img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            img{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+            }
+        }
+        .content{
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            .table{
+                width: 100%;
+                .Review{
+                    background-color: white;
+                    padding: 2rem;
+                    color: #00237c;
+                    h1{
+                        color: #00237c;
+                    }
+                    p{
+                        font-size: 17px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .gif{
+                width: 100%;
+            }
+        }
+        h2{
+            text-align: center;
+            color:#00237c ;
+        }
+    }
+
+}
+table{
+  color: #00237c;
+  font-weight: 600;
+  font-size: 17px;
+  border: 1px solid #00237c;
+  border-collapse: collapse;
+  width: 100%;
+  tr{
+    td{
+        padding:0.5rem 1rem;
+    }
+  }
+}
+tr,td{
+    border:1px solid #00237c ;
+}

@@ -1,0 +1,107 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 8rem;
+  z-index: 0;
+  .forms{
+      width: 40%;
+      padding: 2rem;
+     background-color: rgb(250, 246, 246);
+     border-radius: 10px;
+     .sub_forms{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+     }
+     .actions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:20px;
+        .sBtn{
+            background-color:#00237c;
+            height: 2.8rem;
+            color: white;
+            font-size: 18px;
+        }
+        .rBtn{
+            border: 1px solid #00237c;
+            height: 2.8rem;
+            color: #00237c;
+            font-size: 18px;
+        }
+     }
+  }
+  .brewery_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    .breweries {
+      width: 40%;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: #00237c;
+      gap: 30px;
+      padding: 2rem;
+      background-color: rgb(241, 234, 234);
+      transition: all 0.5s;
+      .img {
+        flex-grow: 1;
+        img {
+          width: 100px;
+          border-radius: 50%;
+        }
+      }
+      .content {
+        flex-grow: 2;
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .text{
+            width: 100%;
+            h2{
+                font-style: italic;
+            }
+        }
+        .img_svg{
+          width: 100%;
+          img{
+            width: 120px;
+            height: 120px;
+            float: right;
+          }
+        }
+       
+      }
+      &:hover{
+        transform:scale(1.08);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

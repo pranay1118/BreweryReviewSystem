@@ -1,0 +1,29 @@
+<div class="main">
+
+    <div class="sub_main" >
+     <h1>Register Form</h1>
+       <form [formGroup]="loginForm" (submit)="login()">
+         <mat-form-field class="example-full-width" appearance="outline">
+             <mat-label>Username</mat-label>
+             <input matInput placeholder="Enter username"  formControlName="username">
+             <mat-icon matSuffix>account_circle</mat-icon>
+           </mat-form-field>
+           <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Enter username"  formControlName="email">
+            <mat-icon matSuffix> email</mat-icon>
+          </mat-form-field>
+           <mat-form-field class="example-full-width" appearance="outline">
+             <mat-label>Password</mat-label>
+             <input [type]="passType" matInput placeholder="Enter password" formControlName="password" >
+             <mat-icon matSuffix (click)="togglePassword()">{{showPass? 'visibility': 'visibility_off'}}</mat-icon>
+           </mat-form-field>
+           <button type="submit" mat-raised-button  class="example-full-width sbtn">Register</button>
+           <br>
+           <br>
+           <h4 style="text-align: center;text-decoration: none;" ><a routerLink="/login">Login</a></h4>
+       </form>
+    </div>
+ </div>
+ <ngx-ui-loader></ngx-ui-loader>
+ 

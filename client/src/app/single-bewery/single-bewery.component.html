@@ -1,0 +1,109 @@
+<div class="main">
+  <h2 style="float: left; width: 86%">
+    <a routerLink="/home" style="text-decoration: none"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        style="height: 20px; width: 20px"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M9.53 2.47a.75.75 0 010 1.06L4.81 8.25H15a6.75 6.75 0 010 13.5h-3a.75.75 0 010-1.5h3a5.25 5.25 0 100-10.5H4.81l4.72 4.72a.75.75 0 11-1.06 1.06l-6-6a.75.75 0 010-1.06l6-6a.75.75 0 011.06 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+      Back</a
+    >
+  </h2>
+  <div class="sub_main">
+    <div class="img">
+      <a [href]="data.website_url"
+        ><img
+          src="https://w7.pngwing.com/pngs/74/636/png-transparent-root-beer-beer-glasses-san-miguel-beer-beer-thumbnail.png"
+          alt=""
+      /></a>
+    </div>
+    <h2>{{ data.name }}</h2>
+    <form [formGroup]="RatingForm">
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: #00237c;
+        "
+      >
+        <ngx-star-rating
+          formControlName="rating"
+          [id]="'rating'"
+        ></ngx-star-rating>
+        <p>Rate this product.</p>
+      </div>
+    </form>
+    <div class="content">
+      <div class="table">
+        <table>
+          <tr>
+            <td>Brewery Type</td>
+            <td>{{ data.brewery_type }}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{ data.address_1 }}</td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>{{ data.city }}</td>
+          </tr>
+          <tr>
+            <td>State Province</td>
+            <td>{{ data.state_province }}</td>
+          </tr>
+          <tr>
+            <td>Postal Code</td>
+            <td>{{ data.postal_code }}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>{{ data.country }}</td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td>{{ data.longitude }}</td>
+          </tr>
+          <tr>
+            <td>Latitude</td>
+            <td>{{ data.latitude }}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{ data.phone }}</td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>{{ data.state }}</td>
+          </tr>
+          <tr>
+            <td>street</td>
+            <td>{{ data.street }}</td>
+          </tr>
+        </table>
+        <br>
+        <button mat-raised-button style="background-color: #00237c;color:white;" (click)="addReview()">Add Review</button>
+        <div class="Review"  >
+          <h2>Reviews</h2>
+          <p *ngIf="isReviewData">{{review}}</p>
+          <p *ngIf="!isReviewData" >Review is not present!</p>
+        </div>
+      </div>
+      <div class="gif">
+        <img src="../../assets/img/beer.gif" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+<ngx-ui-loader></ngx-ui-loader>
